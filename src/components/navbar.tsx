@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useUser, SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import style from "../styles/navBar.module.css";
-import SearchBar from "./searchBar";
 import FloatingCart from "./floatingCart";
 import HamburgerMenu from "./hamburgerMenu";
 

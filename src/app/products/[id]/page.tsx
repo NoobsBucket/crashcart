@@ -6,8 +6,6 @@ import { useUser, SignInButton } from "@clerk/nextjs";
 import Navbar from "@/src/components/navbar";
 import { useCart } from "@/src/components/CartContext";
 
-export const runtime = 'edge';
-
 type ProductImage = { id: number; image_url: string; sort_order: number };
 type Product = {
   id: number;
