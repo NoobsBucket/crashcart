@@ -9,7 +9,8 @@ function getDB() {
     const path = require('path');
     return new Database(path.join(process.cwd(), 'local.db'));
   }
-  return globalThis.env.DB;
+  // Production — Cloudflare D1
+  return (globalThis as any).env?.DB ?? (process.env as any).DB;
 }
 
 // GET all products (optionally filter by category_id) with images
