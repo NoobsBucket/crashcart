@@ -1,6 +1,5 @@
 export {};
-export const runtime = process.env.NODE_ENV === 'development' ? 'nodejs' : 'edge';
-
+export const runtime = 'edge'
 declare global {
   var env: {
     DB: D1Database;
