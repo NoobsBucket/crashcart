@@ -1,6 +1,5 @@
 {
   "name": "crashcart",
-  "account_id": "5ddbcd13948de6131b3554fdd3fe04a4",
   "compatibility_date": "2025-01-01",
   "compatibility_flags": ["nodejs_compat"],
   "pages_build_output_dir": ".next",
