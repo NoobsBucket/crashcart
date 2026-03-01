@@ -1,9 +1,11 @@
 "use client";
 export const dynamic = 'force-dynamic'
+import { Suspense } from "react";
 import { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Navbar from "@/src/components/navbar";
 import { useCart } from "@/src/components/CartContext";
+
 type Product = {
   id: number;
   name: string;
@@ -13,7 +15,7 @@ type Product = {
   category_name: string;
 };
 
-export default function SearchPage() {
+function SearchContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const { addToCart } = useCart();
@@ -24,7 +26,7 @@ export default function SearchPage() {
   const [added, setAdded] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
-    if (!query) return;
+    if (!query) { setLoading(false); return; }
     setLoading(true);
     fetch(`/api/search?q=${encodeURIComponent(query)}`)
       .then(res => res.json())
@@ -113,5 +115,17 @@ export default function SearchPage() {
         )}
       </div>
     </>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={
+      <div style={{ textAlign: "center", color: "#999", marginTop: 120, fontFamily: "sans-serif" }}>
+        Searching...
+      </div>
+    }>
+      <SearchContent />
+    </Suspense>
   );
 }
