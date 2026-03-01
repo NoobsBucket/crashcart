@@ -1,10 +1,9 @@
 "use client";
-
+export const dynamic = 'force-dynamic'
 import { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Navbar from "@/src/components/navbar";
 import { useCart } from "@/src/components/CartContext";
-
 type Product = {
   id: number;
   name: string;

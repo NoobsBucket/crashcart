@@ -1,5 +1,5 @@
 export {};
-export const runtime = 'edge'
+export const dynamic = 'force-dynamic'
 declare global {
   var env: {
     DB: D1Database;
