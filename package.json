@@ -2,9 +2,9 @@
   "name": "crashcart",
   "version": "0.1.0",
   "private": true,
- "scripts": {
+"scripts": {
   "dev": "next dev",
-  "build": "next build",
+  "build": "opennext build",
   "start": "next start"
 },
   "dependencies": {
