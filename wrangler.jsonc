@@ -2,7 +2,7 @@
   "name": "crashcart",
   "compatibility_date": "2025-01-01",
   "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": ".next",
+  "pages_build_output_dir": ".output/static",
   "d1_databases": [
     {
       "binding": "DB",

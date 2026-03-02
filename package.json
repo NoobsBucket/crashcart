@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next-on-pages build",
-    "start": "next-on-pages start"
+    "start": "next start"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.992.0",
