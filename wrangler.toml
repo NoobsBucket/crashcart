@@ -1,9 +1,11 @@
-
-
 name = "crashcart"
-account_id = "5ddbcd13948de6131b3554fdd3fe04a4"
+main = ".open-next/worker.js"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+pages_build_output_dir = ".open-next"
 
 [[d1_databases]]
-binding = "crash_card_prod_db"
+binding = "DB"
 database_name = "crash-card-prod-db"
 database_id = "5a26386c-d5ed-4b62-abc2-ebcdb28df137"
